@@ -36,7 +36,7 @@ class InvenioSearchClient extends GuzzleHttp\Client {
 			if ( $response->getStatusCode() === 200 ) {
 				return json_decode( $response->getBody(), true );
 			} else {
-				return 'Error retreiving records: ' . $response->getReasonPhrase() . "\nError code: " . $response->getStatusCode() . "\n";
+			return 'Error retreiving records: ' . $response->getReasonPhrase() . "\nError code: " . $response->getStatusCode() . "\n";
 			}
 		} catch ( Exception $e ) {
 			return 'Error retreiving records: ' . $e->getMessage() . "\n";
